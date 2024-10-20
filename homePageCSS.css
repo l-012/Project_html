@@ -1,0 +1,534 @@
+/* Define color variables */
+:root {
+    --color1: #31473A; /* Dark green for header */
+    --color2: #4B6A5D; /* Slightly lighter green for hover effects */
+    --color3: #EDF4F2; /* Very light greenish-white for background */
+    --color4: #8EB8A4; /* Light green for accents */
+    --color5: #1F3C2B; /* Darker green for text or additional contrast */
+}
+
+/* Reset margins and paddings */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color3);
+    color: var(--color5);
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--color1);
+}
+
+.logo img {
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--color2);
+}
+
+/* Header actions styling */
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Space between the elements */
+    gap: 10px;  /* Equal spacing between wishlist button and dark mode button */
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1rem;
+    width: 200px; /* Ensure a uniform length for the input */
+}
+
+.search-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--color4);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-form button:hover {
+    background-color: var(--color2);
+}
+
+/* Wishlist button styling */
+.wishlist-button {
+    font-size: 2rem;  /* Ensure the heart icon has the same size */
+    color: #4B6A5D; /* Color to match your theme */
+    cursor: pointer; /* Make it clickable */
+    border: none; /* Remove any border below the heart */
+    outline: none; /* Remove outline if any */
+}
+
+/* Dark mode toggle styling */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-icon {
+    font-size: 1.5rem;  /* Reduced size for dark mode icon */
+    cursor: pointer;
+    margin: 0; /* Remove any margin around the icon */
+}
+
+/* Adjust sizes for consistency */
+.wishlist-button,
+#theme-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem; /* Fixed width */
+    height: 2rem; /* Fixed height */
+}
+
+/* Ensure wishlist button and dark mode button are spaced */
+.wishlist-button:hover,
+#theme-icon:hover {
+    color: var(--color2); /* Change color on hover if needed */
+}
+
+/* Header image styling */
+.header-image {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hero section styling */
+.hero {
+    height: 50vh;
+    background: linear-gradient(90deg, hsla(150, 60%, 50%, 1) 0%, hsla(180, 70%, 40%, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color5);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color4);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--color4);
+}
+
+/* Trending Products Section */
+.trending-products {
+    padding: 2rem;
+    text-align: center;
+}
+
+.trending-products h2 {
+    color: var(--color5);
+    margin-bottom: 1rem;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    flex: 1;
+    margin: 0.5rem;
+}
+
+.product-item img {
+    width: 200%;
+    max-width: 200px;
+    height: 105%;
+    border-radius: 10px;
+}
+
+/* New Arrivals Section */
+.new-arrivals {
+    padding: 2rem;
+    text-align: center;
+}
+
+.new-arrivals h2 {
+    color: var(--color5);
+    margin-bottom: 1rem;
+}
+
+.arrival-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.arrival-item {
+    flex: 1;
+    margin: 0.5rem;
+}
+
+.arrival-item img {
+    width: 200%;
+    max-width: 200px;
+    height: 105%;
+    border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--color1);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.footer-links a:hover {
+    color: var(--color2);
+}
+
+/* Newsletter Signup */
+.newsletter-link {
+    margin-top: 1rem;
+}
+
+.newsletter-link a {
+    color: white; /* White color for the link */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.newsletter-link a:hover {
+    color: var(--color2); /* Slightly lighter green for hover effect */
+}
+
+.footer-copy {
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    margin-bottom: 1rem;
+}
+
+.footer-social a {
+    margin: 0 0.5rem;
+}
+
+.footer-social img {
+    width: 20px; /* Adjust icon size */
+    height: 20px; /* Adjust icon size */
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-bottom a:hover {
+    color: var(--color2);
+}
+
+.footer-bottom span {
+    color: white;
+    margin: 0 0.5rem;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Header dark mode */
+body.dark-mode header {
+    background-color: #333333;
+}
+
+/* Navigation links dark mode */
+body.dark-mode nav ul li a {
+    color: #ffffff;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: var(--color4);
+}
+
+/* Search form dark mode */
+body.dark-mode .search-form input[type="text"] {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+body.dark-mode .search-form button {
+    background-color: var(--color2);
+    color: #ffffff;
+}
+
+/* Wishlist button dark mode */
+body.dark-mode .wishlist-button {
+    color: #ffffff;
+}
+
+body.dark-mode .wishlist-button:hover {
+    color: var(--color4);
+}
+
+/* Hero section dark mode */
+body.dark-mode .hero h1, body.dark-mode .hero p {
+    color: #ffffff;
+}
+
+/* Trending Products dark mode */
+body.dark-mode .trending-products h2,
+body.dark-mode .new-arrivals h2 {
+    color: #ffffff;
+}
+
+/* Footer dark mode */
+body.dark-mode footer {
+    background-color: #333333;
+}
+
+/* Footer links dark mode */
+body.dark-mode .footer-links a,
+body.dark-mode .footer-bottom a {
+    color: #ffffff;
+}
+
+body.dark-mode .footer-links a:hover,
+body.dark-mode .footer-bottom a:hover {
+    color: var(--color4);
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .product-container,
+    .arrival-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item,
+    .arrival-item {
+        max-width: 90%;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Icon styling for moon and sun toggle */
+.wishlist-button,
+.theme-toggle {
+    font-size: 2rem;  /* Icon size */
+    color: #4B6A5D; /* Green color */
+    cursor: pointer;
+    margin: 0 10px; /* Equal space between icons */
+}
+
+.wishlist-button:hover,
+#theme-icon:hover {
+    color: var(--color2); /* Hover effect */
+}
+
+
+/* Gallery container */
+.gallery-container {
+    position: relative;
+    width: 100%; /* Ensures the container takes up 100% of the page width */
+    max-width: 100%; /* Allow the container to take the full width */
+    overflow: hidden; /* Hide any excess content beyond the container */
+    text-align: center;
+}
+
+#gallery-image {
+    width: 100%;         /* Ensure the image takes up 100% of the container width */
+    height: 100%;        /* Let the height adapt based on the width */
+    object-fit: cover;   /* Ensures the image covers the space without distortion */
+    display: block;      /* Ensures the image behaves like a block element */
+    margin: 0 auto;      /* Center the image within the container */
+}
+
+/* Back and Next Button Styling */
+#back-btn,
+#next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    background-color: #4B6A5D; /* Button color */
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#back-btn {
+    left: 10px;
+}
+
+#next-btn {
+    right: 10px;
+}
+
+/* Hover effects for buttons */
+#back-btn:hover,
+#next-btn:hover {
+    background-color: #31473A; /* Darker green on hover */
+}
+
+
+
+/* Styles for search input and results */
+.search-form {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-results {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;  /* Initially hide search results */
+}
+
+#search-results div {
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#search-results div:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+/* Flash Sale Timer Styles */
+.timer-container {
+    background-color: #28a745; /* Green background for the sale */
+    color: white;
+    /* padding: 20px; */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    /* max-width: 400px; */
+    margin: 20px auto;
+}
+
+.timer-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+    padding: 10px;
+    border-radius: 8px;
+    display
+: inline-block;
+}
+
+.timer-container .sale-ended {
+    font-size: 1.5rem;
+    color: #ff5733; /* Red color for "Sale Ended" message */
+    font-weight: bold;
+}
+

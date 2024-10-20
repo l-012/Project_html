@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="card heading-card">
+            <h1>Find Your Skin Type</h1>
+        </div>
+
+        <div class="card question-card">
+            <div class="question">
+                <p>How does your skin feel after washing?</p>
+                <label><input type="radio" name="q1" value="dry"> Tight & dry</label><br>
+                <label><input type="radio" name="q1" value="oily"> Oily</label><br>
+                <label><input type="radio" name="q1" value="normal"> Normal</label>
+            </div>
+        </div>
+
+        <div class="card question-card">
+            <div class="question">
+                <p>Do you experience breakouts?</p>
+                <label><input type="radio" name="q2" value="yes"> Yes</label><br>
+                <label><input type="radio" name="q2" value="no"> No</label>
+            </div>
+        </div>
+
+        <div class="card question-card">
+            <div class="question">
+                <p>How would you describe your skin's appearance?</p>
+                <label><input type="radio" name="q3" value="dry"> Flaky/Dry</label><br>
+                <label><input type="radio" name="q3" value="oily"> Shiny/Oily</label><br>
+                <label><input type="radio" name="q3" value="balanced"> Balanced/Glowy</label>
+            </div>
+        </div>
+
+        <div class="card results-card">
+            <button type="button" onclick="submitQuiz()">Get Results</button>
+        </div>
+    </div>
+
+    <div id="results" class="results">
+        <h2>Your Skin Type:</h2>
+        <p id="skin-type"></p>
+        <h3>Suggested Products:</h3>
+        <ul id="product-suggestions"></ul>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

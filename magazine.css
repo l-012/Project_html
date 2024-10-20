@@ -1,0 +1,97 @@
+:root {
+    --color1: #31473A; /* Dark green for header */
+    --color2: #4B6A5D; /* Slightly lighter green for hover effects */
+    --color3: 	#fdf5e2; /* Very light peachish color for background */
+    --color4: #8EB8A4; /* Light green for accents */
+    --color5: #1F3C2B; /* Darker green for text or additional contrast */
+}
+
+/* Basic reset for margins and paddings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color3);
+}
+
+/* Header section */
+.magazine-header {
+    background-color: var(--color1);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.magazine-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Magazine container */
+.magazine-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Article section */
+.article {
+    background-color: var(--color4);
+    color: var(--color5);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-content h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.article-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Recommended products section */
+.recommended-products {
+    margin-top: 2rem;
+}
+
+.recommended-products h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color5);
+}
+
+.product-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.product {
+    flex: 1;
+    background-color: var(--color4);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--color5);
+}

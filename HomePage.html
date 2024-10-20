@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharmChroma</title>
+    <link rel="stylesheet" href="homePageCSS.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="CharmChroma Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#stores">Stores & Services</a></li>
+                <li><a href="#new-arrivals">New Arrivals</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="magazine.html">Magazine</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <form class="search-form" id="search-form">
+                <input type="text" id="search-input" placeholder="Search..." />
+                <button type="submit">Search</button>
+            </form>
+            <div id="search-results"></div>
+            <a href="wishlist.html" class="wishlist-button">♡</a>
+            <button id="dark-mode-toggle" class="theme-toggle">
+                <span id="theme-icon"> ☀︎ </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flash Sale Countdown Timer Section -->
+    <div id="flash-sale-timer" class="timer-container">
+        <h3>Flash Sale Ends In:</h3>
+        <p id="countdown" class="countdown-timer">Loading...</p>
+    </div>
+
+    <div class="header-image">
+        <a href="https://us.innisfree.com/pages/back-to-school-skincare-guide" id="image-link">
+            <div class="gallery-container">
+                <img id="gallery-image" src="Home_img.png" alt="Promotional Banner">
+            </div>
+        </a>
+        <button id="back-btn">←</button>
+        <button id="next-btn">→</button>
+    </div>
+
+    <main>
+        <section class="trending-products">
+            <h2>Trending Products</h2>
+            <div class="product-container">
+                <div class="product-item"><img src="trending1.png" alt="Trending Product 1"></div>
+                <div class="product-item"><img src="trending2.png" alt="Trending Product 2"></div>
+                <div class="product-item"><img src="trending3.png" alt="Trending Product 3"></div>
+                <div class="product-item"><img src="trending4.png" alt="Trending Product 4"></div>
+            </div>
+        </section>
+
+        <section class="new-arrivals">
+            <h2>New Arrivals</h2>
+            <div class="arrival-container">
+                <div class="arrival-item"><img src="newarrival1.png" alt="New Arrival 1"></div>
+                <div class="arrival-item"><img src="newarrival2.png" alt="New Arrival 2"></div>
+                <div class="arrival-item"><img src="newarrival3.png" alt="New Arrival 3"></div>
+                <div class="arrival-item"><img src="newarrival4.png" alt="New Arrival 4"></div>
+                <div class="arrival-item"><img src="newarrival5.png" alt="New Arrival 5"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="#return-policy">Return Policy</a>
+            <a href="#contact-us">Contact Us</a>
+        </div>
+
+        <div class="newsletter-link">
+            <a href="news.html">Sign Up for Our Newsletter</a>
+        </div>
+        <br>
+        <div class="footer-copy">
+            <p>Copyright ⓒ 2024 AURAALLURE US Inc.<br> All rights reserved</p>
+        </div>
+        <br>
+        <div class="footer-social">
+            <a href="#"><img src="fb2_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="insta_icon.png" alt="Instagram"></a>
+            <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
+            <a href="#"><img src="yt_icon.png" alt="YouTube"></a>
+        </div>
+        <br>
+        <div class="footer-bottom">
+            <a href="#accessibility">Accessibility</a>
+            <span>|</span>
+            <a href="#terms-of-use">Terms of Use</a>
+            <span>|</span>
+            <a href="#privacy-policy">Privacy Policy</a>
+            <span>|</span>
+            <a href="#cookies-ads">Cookies & Ads</a>
+        </div>
+    </footer>
+
+    <script src="homePage.js"></script>
+    <script src="timer.js"></script> 
+</body>
+
+</html>

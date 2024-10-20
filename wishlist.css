@@ -1,0 +1,44 @@
+/* Define color variables */
+:root {
+    --color1: #31473A; /* Dark green for header */
+    --color2: #4B6A5D; /* Slightly lighter green for hover effects */
+    --color3: #EDF4F2; /* Very light greenish-white for background */
+    --color4: #8EB8A4; /* Light green for accents */
+    --color5: #1F3C2B; /* Darker green for text or additional contrast */
+}
+
+/* Basic reset for margins and paddings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Wishlist page container */
+.wishlist-container {
+    height: 100vh;
+    background: linear-gradient(90deg, hsla(150, 60%, 50%, 1) 0%, hsla(180, 70%, 40%, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color5);
+}
+
+.wishlist-message {
+    background-color: var(--color3);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-message h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color5);
+}
+
+.wishlist-message p {
+    font-size: 1rem;
+    color: var(--color5);
+}
