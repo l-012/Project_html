@@ -1,87 +1,63 @@
-// Handle Dark Mode Toggle
 const themeIcon = document.getElementById('theme-icon');
-
-// Check the user's preference in localStorage
 const currentTheme = localStorage.getItem('theme');
 
-// Apply dark mode and set the correct icon if it was previously selected
 if (currentTheme === 'dark') {
     document.body.classList.add('dark-mode');
-    themeIcon.textContent = ' ☾ '; // Moon icon for dark mode
+    themeIcon.textContent = ' ☾ ';
 } else {
-    themeIcon.textContent = ' ☀︎ '; // Sun icon for light mode
+    themeIcon.textContent = ' ☀︎ ';
 }
 
-// Toggle dark mode and switch icons on icon click
 themeIcon.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
-
-    // Change icon based on mode
     if (document.body.classList.contains('dark-mode')) {
-        themeIcon.textContent = ' ☾ '; // Switch to moon icon
+        themeIcon.textContent = ' ☾ ';
         localStorage.setItem('theme', 'dark');
     } else {
-        themeIcon.textContent = ' ☀︎ '; // Switch to sun icon
+        themeIcon.textContent = ' ☀︎ ';
         localStorage.setItem('theme', 'light');
     }
 });
 
-// Handle Image Gallery
 const images = [
-    "Home_img.png",   // First image
-    "Home_img2.png",  // Second image
-    "Home_img3.png"   // Third image
+    "Home_img.png",
+    "Home_img2.png",
+    "Home_img3.png"
 ];
 
-let currentImageIndex = 0;  // Track the current image index
+let currentImageIndex = 0;
 
-const galleryImage = document.getElementById("gallery-image");  // Get the image element
-const backButton = document.getElementById("back-btn");  // Get the back button
-const nextButton = document.getElementById("next-btn");  // Get the next button
-const imageLink = document.getElementById("image-link");  // Get the image link
+const galleryImage = document.getElementById("gallery-image");
+const backButton = document.getElementById("back-btn");
+const nextButton = document.getElementById("next-btn");
+const imageLink = document.getElementById("image-link");
 
-// Function to update the image source
 function updateImage() {
-    galleryImage.src = images[currentImageIndex];  // Set the current image
+    galleryImage.src = images[currentImageIndex];
 }
 
-// Event listener for the next button
 nextButton.addEventListener("click", function(event) {
-    event.stopPropagation();  // Prevent the link from opening when clicking Next
-
-    currentImageIndex++;  // Move to the next image
-
-    // If we've reached the end, loop back to the first image
+    event.stopPropagation();
+    currentImageIndex++;
     if (currentImageIndex >= images.length) {
         currentImageIndex = 0;
     }
-
-    updateImage();  // Update the image shown
+    updateImage();
 });
 
-// Event listener for the back button
 backButton.addEventListener("click", function(event) {
-    event.stopPropagation();  // Prevent the link from opening when clicking Back
-
-    currentImageIndex--;  // Move to the previous image
-
-    // If we're at the first image, loop back to the last image
+    event.stopPropagation();
+    currentImageIndex--;
     if (currentImageIndex < 0) {
         currentImageIndex = images.length - 1;
     }
-
-    updateImage();  // Update the image shown
+    updateImage();
 });
 
-// Event listener for the image link to open the link when the image is clicked
-imageLink.addEventListener("click", function(event) {
-    // Allow the link to open when the image itself is clicked
-});
+imageLink.addEventListener("click", function(event) {});
 
-// Initialize the gallery with the first image
 updateImage();
 
-// Handle Product Search
 const products = [
     { id: 1, name: "Aloe Vera Gel", category: "Skincare" },
     { id: 2, name: "Vitamin C Serum", category: "Skincare" },
@@ -95,25 +71,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
     const resultContainer = document.getElementById('search-results');
 
-    // Prevent form submission when pressing Enter
     searchForm.addEventListener('submit', function(event) {
         event.preventDefault();
     });
 
-    // Listen for input changes in the search bar
     searchInput.addEventListener('input', debounce(function() {
         const query = searchInput.value.trim();
-
-        // Show the results container if there is a query
         if (query.length > 0) {
-            resultContainer.style.display = 'block';  // Show results
-
-            // Filter products based on search query
+            resultContainer.style.display = 'block';
             const results = products.filter(product => 
                 product.name.toLowerCase().includes(query.toLowerCase())
             );
-
-            resultContainer.innerHTML = '';  // Clear previous results
+            resultContainer.innerHTML = '';
             if (results.length === 0) {
                 resultContainer.innerHTML = '<div>No results found.</div>';
             } else {
@@ -124,11 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         } else {
-            resultContainer.style.display = 'none';  // Hide results if query is empty
+            resultContainer.style.display = 'none';
         }
-    }, 300));  // Delay for debounce (300ms)
+    }, 300));
 
-    // Debounce function to limit the frequency of API calls
     function debounce(func, delay) {
         let timeout;
         return function() {
@@ -138,16 +106,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Handle Flash Sale Countdown
 const saleEndTime = new Date('2024-10-30T23:59:59').getTime();
 const countdownElement = document.getElementById('countdown');
 
-// Update the countdown every 1 second
 const countdownInterval = setInterval(function() {
     const now = new Date().getTime();
     const timeLeft = saleEndTime - now;
 
-    // Calculate days, hours, minutes, and seconds
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
@@ -158,6 +123,6 @@ const countdownInterval = setInterval(function() {
     if (timeLeft <= 0) {
         clearInterval(countdownInterval);
         countdownElement.innerHTML = "Sale Ended";
-        countdownElement.classList.add("sale-ended");  // Apply Sale Ended styling
+        countdownElement.classList.add("sale-ended");
     }
 }, 1000);
