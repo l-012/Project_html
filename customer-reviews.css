@@ -1,0 +1,133 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #EDF4F2;
+    color: #31473A;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #31473A;
+    color: #EDF4F2;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #8EB8A4;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reviews-section {
+    background-color: #EDF4F2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review {
+    border-bottom: 1px solid #4B6A5D;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.review h3 {
+    margin: 0;
+    color: #31473A;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+.review-form-section {
+    background-color: #EDF4F2;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #4B6A5D;
+    margin-bottom: 5px;
+}
+
+input[type="text"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4B6A5D;
+    border-radius: 4px;
+    background-color: #EDF4F2;
+}
+
+button {
+    background-color: #8EB8A4;
+    color: #EDF4F2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4B6A5D;
+}
+
+/* Footer styling */
+
+footer {
+    background-color: #1F3C2B;
+    color: #EDF4F2;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #8EB8A4;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #EDF4F2;
+}
+
+footer p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    text-align: center;
+}

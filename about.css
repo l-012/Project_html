@@ -1,0 +1,82 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9; /* Light green background */
+}
+
+header {
+    background: #025905; /* Dark green header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Increased font size for the header */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Bold links */
+    transition: color 0.3s ease; /* Transition effect for hover */
+}
+
+nav ul li a:hover {
+    color: #054f13; /* Lighter green on hover */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px; /* Max width for better readability */
+    margin: auto; /* Centering main content */
+}
+
+.about {
+    background: white;
+    padding: 30px; /* Increased padding */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Transition effect */
+}
+
+.about:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.about h2 {
+    color: #07510a; /* Dark green for headings */
+    font-size: 2em; /* Increased heading size */
+}
+
+.about p {
+    margin-bottom: 1.5em; /* Space between paragraphs */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

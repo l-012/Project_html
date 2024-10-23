@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - CharmChroma</title>
+    <link rel="stylesheet" href="customer-reviews.css">
+</head>
+<body>
+    <header>
+        <h1>Customer Reviews</h1>
+    </header>
+    <main>
+        <section class="reviews-section">
+            <h2>See What Our Customers Are Saying</h2>
+            <div id="reviews-container">
+                <!-- Existing reviews will be displayed here -->
+                <div class="review">
+                    <h3>Jane Doe</h3>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>Absolutely love the skincare products. My skin feels refreshed!</p>
+                </div>
+                <div class="review">
+                    <h3>John Smith</h3>
+                    <p>⭐⭐⭐⭐</p>
+                    <p>Fast delivery and amazing quality. Highly recommend!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review submission form -->
+        <section class="review-form-section">
+            <h2>Submit Your Review</h2>
+            <form id="review-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Choose a rating</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="1">⭐</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" name="review-text" rows="5" placeholder="Write your review here" required></textarea>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Contact US</a></li>
+                <li><a href="#">Cookies and Ads</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p>&copy; 2024 CharmChroma E-Retail. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="customer-reviews.js"></script>
+</body>
+</html>
