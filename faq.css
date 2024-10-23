@@ -1,7 +1,6 @@
-/* Styles for FAQ Section */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(90deg, #1A4D2E 0%, #4F6F52 100%); /* Green gradient background */
+    background: linear-gradient(90deg, #1A4D2E 0%, #4F6F52 100%);
     margin: 0;
     padding: 0;
 }
@@ -11,17 +10,17 @@ body {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #ffffff; /* Keep card background white */
+    background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
 .faq-heading {
-    text-align: center; /* Center the heading */
-    font-size: 2rem; /* Larger font size for the heading */
+    text-align: center;
+    font-size: 2rem;
     font-weight: bold;
-    color: #31473A; /* Matching color to the questions */
-    margin-bottom: 1.5rem; /* Spacing below the heading */
+    color: #31473A;
+    margin-bottom: 1.5rem;
 }
 
 .faq-item {
