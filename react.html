@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Offer Timer</title>
+
+  <!-- React and ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <!-- Babel CDN for JSX Compilation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+  
+  <style>
+    /* Define color variables */
+    :root {
+      --color1: #2F4F3C; /* Dark green for header */
+      --color2: #4B6A5D; /* Slightly lighter green for hover effects */
+      --color3: #A2B8A2; /* Light greenish for background */
+      --color4: #8EB8A4; /* Light green for accents */
+      --color5: #1F3C2B; /* Darker green for text or additional contrast */
+      --color6: #3B5A3B; /* Another dark green for deeper contrast */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: var(--color5); /* Dark green background */
+    }
+
+    #offer-container {
+      text-align: center;
+      background-color: var(--color3); /* Light greenish background */
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+      border: 2px solid var(--color5); /* Dark green border for contrast */
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--color3); /* Dark green for the main heading */
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: var(--color1); /* Dark green header */
+    }
+
+    .offer-message {
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: var(--color5); /* Dark green for the offer message */
+    }
+
+    .timer {
+      font-size: 2em;
+      color: var(--color2); /* Slightly lighter green for the timer */
+    }
+
+    .offer-message p {
+      color: var(--color5); /* Text for "offer expired" message */
+    }
+
+    /* New sections styling */
+    .additional-info {
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: var(--color5);
+    }
+
+    .action-button {
+      background-color: var(--color1);
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .action-button:hover {
+      background-color: var(--color2);
+    }
+
+    .offer-image {
+      margin-top: 30px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Main Heading -->
+  <h1>Exclusive Offer Timer</h1>
+
+  <!-- Timer and Offer Section -->
+  <div id="offer-container"></div>
+
+  <!-- React Script -->
+  <script type="text/babel">
+    const OfferTimer = () => {
+      // Set the offer expiration date (example: 1 hour from now)
+      const offerEndTime = new Date().getTime() + 60 * 60 * 1000; // 1 hour countdown
+
+      // State for time remaining
+      const [timeRemaining, setTimeRemaining] = React.useState(offerEndTime - new Date().getTime());
+
+      React.useEffect(() => {
+        // Update the timer every second
+        const timerInterval = setInterval(() => {
+          const newTimeRemaining = offerEndTime - new Date().getTime();
+          setTimeRemaining(newTimeRemaining);
+
+          // If time is up, stop the timer
+          if (newTimeRemaining <= 0) {
+            clearInterval(timerInterval);
+          }
+        }, 1000);
+
+        // Cleanup interval on component unmount
+        return () => clearInterval(timerInterval);
+      }, [offerEndTime]);
+
+      // Function to format time as "hh:mm:ss"
+      const formatTime = (milliseconds) => {
+        const hours = Math.floor(milliseconds / (1000 * 60 * 60));
+        const minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      };
+
+      return (
+        <div id="offer-container">
+          <h2>Exclusive Skincare Offer</h2>
+          <p className="offer-message">Buy One, Get One Free! Don't Miss Out!</p>
+          <div className="timer">
+            {timeRemaining > 0 ? formatTime(timeRemaining) : "Offer Expired"}
+          </div>
+          {timeRemaining <= 0 && <p className="offer-message">The offer has expired. Stay tuned for more!</p>}
+
+          {/* Additional info section below the offer */}
+          <div className="additional-info">
+            <p>Hurry up and grab your favorite skincare products! This limited-time offer allows you to buy one product and get another absolutely free. Perfect for treating yourself or a loved one!</p>
+          </div>
+
+          {/* Call to action button */}
+          <button className="action-button">Shop Now</button>
+        </div>
+      );
+    };
+
+    // Render the OfferTimer component
+    ReactDOM.render(<OfferTimer />, document.getElementById('offer-container'));
+  </script>
+
+</body>
+</html>
