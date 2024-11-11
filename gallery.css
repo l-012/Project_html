@@ -1,0 +1,41 @@
+:root {
+    --color1: #31473A; /* Dark green for header */
+    --color2: #4B6A5D; /* Slightly lighter green for hover effects */
+    --color3: #EDF4F2; /* Very light greenish-white for background */
+    --color4: #8EB8A4; /* Light green for accents */
+    --color5: #1F3C2B; /* Darker green for text or additional contrast */
+}
+
+body {
+    background-color: var(--color3);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.gallery-container {
+    text-align: center;
+    color: var(--color1);
+}
+
+h1 {
+    color: var(--color5);
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 30px); /* 3 items per row */
+    max-width: calc(33.333% - 30px);
+}
+
